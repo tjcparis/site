@@ -90,8 +90,12 @@ $(document).ready(function () {
       font-size: 14px;
     }
 
-    #transport li,#voiture li, #horaires li {
+    #transport li,#voiture li, #horaires li, #voiture .GpsType {
       margin-bottom:10px;
+    }
+
+    #voiture .GpsType {
+      font-weight: bold;
     }
 
     #horaires ul .header {
@@ -241,8 +245,9 @@ $(document).ready(function () {
 
 
 <!------------------------------------------ contenu ------------------------------------------->
+<div id="map-canvas"></div>
 <div id="centrer">
-  <div id="map-canvas"></div>
+  
   <div id="horaires">
     <p class="titre_txt">Horaires</p>
     <p class="hint">Tous les samedis</p>
@@ -273,17 +278,31 @@ $(document).ready(function () {
     <p class="titre_txt">Venir par les transports</p>
     <p class="hint">Rechercher un itinéraire</p>
     <ul>
-      <li class="texte_txt"><a>Depuis Paris</a></li>
-      <li class="texte_txt"><a>Depuis Aéroport charles de gaule</a></li>
-      <li class="texte_txt"><a>Depuis Aéroport d'Orly</a></li>
-      <li class="texte_txt"><a>Utiliser la navette de l'église</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Chatelet-Les+Halles+%28RER%29%2C+Paris/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Paris</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Aeroport+Charles+De+Gaulle+1+%28RER%29%2C+Tremblay-en-France/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Aéroport charles de gaule 1</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Aeroport+Charles+De+Gaulle+2+Tgv+%28RER%29%2C+Tremblay-en-France/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Aéroport charles de gaule 2</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/A%C3%A9roport+d%27Orly+Ouest%2C+Paray-Vieille-Poste/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne">Depuis Aéroport d'Orly Ouest</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/A%C3%A9roport+d%27Orly+Sud%2C+Paray-Vieille-Poste/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne">Depuis Aéroport d'Orly Sud</a></li>
+      <!--<li class="texte_txt"><a>Utiliser la navette de l'église</a></li>-->
     </ul>
   </div>
   <div id="voiture">
     <p class="titre_txt">Venir en voiture</p>
     <p class="hint">Itinéraires & localisation GPS</p>
     <ul>
-
+      <li class="texte_txt">Rechercher un itinéraire <a target="_blank" href="http://www.viamichelin.fr/web/Itineraires?strDestLocid=34MTE1NHdtM2kxMTMxLjA0MndpNjEwNTRocjl6Y05EZ3VPRFU0TVRZPWNNaTQxT1RNMk9BPT1jTkRndU9EVTFOVGs9Y01pNDFPVE0xTnc9PWNORGd1T0RVMU5Uaz1jTWk0MU9UTTFOdz09MGZSdWUgZGVzIFBpbnNvbnM=&intItineraryType=1&caravaneHidden=false&vh=CAR&strVehicle=0&itineraryCarType=0&itineraryFuelType=0&isFavoriseAutoroute=false&isAvoidPeage=false&isAvoidVignette=false&isAvoidLNR=false&isAvoidFrontiers=false&dtmDeparture=15%2F06%2F2013&distance=km&devise=1.0|EUR&indemnite=&carbCost=1.6&autoConso=6.8&villeConso=6&routeConso=5.6">viamichelin.fr</a></li>
+      <li class="texte_txt">
+        <div class="GpsType">DD – GPS (lat x lon)</div>
+        <ul>
+          <li class="texte_txt">48.855484 x 2.593394</li>
+        </ul>
+      </li>
+      <li class="texte_txt">
+        <div class="GpsType">DMS – GPS (lat x lon)</div>
+        <ul>
+          <li class="texte_txt">N48° 51M 19.742S x E2° 35M 36.218S</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
